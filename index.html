@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LS CUSTOMS RP — Gestion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login-screen" class="login-screen">
+  <div class="login-card"><div class="local-mode-note">Mode local — données enregistrées sur cet appareil</div>
+    <div class="brand">LS CUSTOMS</div>
+    <p id="login-subtitle" class="muted">Garage & Customs RP</p>
+    <form id="login-form" autocomplete="off">
+      <label>Identifiant</label>
+      <input id="login-username" autocomplete="off" value="" required>
+      <label>Mot de passe</label>
+      <input id="login-password" type="password" autocomplete="new-password" value="" required>
+      <button class="btn primary full">Se connecter</button>
+    </form>
+    <p id="login-error" class="error"></p>
+  </div>
+</div>
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <div class="brand">LS CUSTOMS</div>
+    <div class="subtitle">GARAGE & CUSTOMS RP</div>
+    <div class="nav-section-title">GESTION</div>
+    <nav>
+      <button class="nav-btn active" data-page="dashboard"><span>📊</span><b>Tableau de bord</b></button>
+      <button class="nav-btn" data-page="sales"><span>💰</span><b>Vendre</b></button>
+      <button class="nav-btn" data-page="customs"><span>🔧</span><b>Customs</b></button>
+      <button class="nav-btn" data-page="payroll"><span>💶</span><b>Salaires</b></button>
+    </nav>
+    <div class="nav-section-title">ADMINISTRATION</div>
+    <nav>
+      <button class="nav-btn" data-page="members"><span>👥</span><b>Membres</b></button>
+      <button class="nav-btn" data-page="accounting"><span>🧾</span><b>Comptabilité</b></button>
+      <button class="nav-btn" data-page="reports"><span>📈</span><b>Rapports</b></button>
+      <button class="nav-btn" data-page="settings"><span>⚙️</span><b>Paramètres</b></button>
+    </nav>
+    <div class="sidebar-status"><i></i><span>Système opérationnel</span></div>
+    <div class="user-box">
+      <strong id="user-name"></strong>
+      <span id="user-role" class="badge"></span>
+      <button id="logout" class="btn secondary full">Déconnexion</button>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div><h1 id="page-title">Tableau de bord</h1><p id="today" class="muted"></p></div>
+      <div style="display:flex;gap:8px;align-items:center"><button id="quick-custom" class="btn secondary">+ Custom</button><button id="quick-sale" class="btn primary">+ Vendre</button></div>
+    </header>
+    <section id="page-content"></section>
+  </main>
+</div>
+<div id="modal" class="modal hidden"><div class="modal-card"><button id="close-modal" class="modal-close">×</button><div id="modal-content"></div></div></div>
+<script src="script.js"></script>
+</body>
+</html>
